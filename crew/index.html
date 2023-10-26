@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+        }
+
+        .logo img {
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1); /* Zoom in by 10% on hover */
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .video-frame {
+    
+            border-radius: 9%;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+
+        .video-frame video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .apply-button {
+            margin-top: 30px;
+        }
+
+        .apply-button a {
+            text-decoration: none;
+        }
+
+        .apply-button button {
+            padding: 15px 30px;
+            background-color: #ffd700;
+            border: none;
+            color: black;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .apply-button button:hover {
+            background-color: #ffdb58;
+            transform: scale(1.05);
+        }
+
+        .cta a {
+            margin: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .cta a img {
+            width: 150px;
+        }
+
+        .cta a img:hover {
+            transform: scale(1.1);
+        }
+
+        #stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s linear infinite;
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .cta {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <title>Crew Page</title>
+</head>
+<body>
+    <div id="stars"></div>
+    <div class="content">
+        <div class="logo">
+            <img src="./logo.png" alt="Logo"><BR><BR>
+        </div>
+        <div class="video-container">
+            <div class="video-frame">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/K6fKcveBGM0?si=OGYnEp9ivFeNFXnG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="apply-button">
+            <a href="./apply">
+                <button>Apply Now</button>
+            </a>
+        </div>
+    </div>
+ 
+</body>
+</html>
